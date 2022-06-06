@@ -1,0 +1,64 @@
+/*database.mysql*/
+CREATE DATABASE IF NOT EXISTS trapstone_db;
+USE trapstone_db;
+
+/*levels*/
+DROP TABLE IF EXISTS stone_levels;
+CREATE TABLE IF NOT EXISTS stone_levels (
+	/*The id of a post in the post table*/
+	l_id INTEGER AUTO_INCREMENT NOT NULL,
+
+	/*The level selection*/
+	l_level INTEGER AUTO_INCREMENT NOT NULL,
+
+	/*Base of thumb nail*/
+	l_thumb_base VARCHAR(2048) NOT NULL,
+
+	/*Title of the metadata thing*/
+	l_title VARCHAR(64) NOT NULL,
+
+	/*Hint*/
+	l_hint VARCHAR(256) NOT NULL,
+
+	/*Description of the metadata thing*/
+	l_date_added DATETIME NOT NULL,
+	l_date_modified DATETIME NOT NULL,
+
+	PRIMARY KEY( l_id )
+);
+
+
+/*last_completed*/
+DROP TABLE IF EXISTS stone_last_completed;
+CREATE TABLE IF NOT EXISTS stone_last_completed (
+	/*The id of a post in the post table*/
+	lc_id INTEGER AUTO_INCREMENT NOT NULL,
+	PRIMARY KEY( lc_id )
+);
+
+
+/*settings*/
+DROP TABLE IF EXISTS stone_settings;
+CREATE TABLE IF NOT EXISTS stone_settings (
+	/*The id of a post in the post table*/
+	ss_id INTEGER AUTO_INCREMENT NOT NULL,
+	PRIMARY KEY( ss_id )
+);
+
+
+/*users*/
+DROP TABLE IF EXISTS stone_users;
+CREATE TABLE IF NOT EXISTS stone_users (
+	/*The id of a post in the post table*/
+	su_id INTEGER AUTO_INCREMENT NOT NULL,
+	PRIMARY KEY( su_id )
+);
+
+/*scores (times, really) go in this table*/
+DROP TABLE IF EXISTS stone_scores;
+CREATE TABLE IF NOT EXISTS stone_scores (
+	/*The id of a post in the post table*/
+	sc_id INTEGER AUTO_INCREMENT NOT NULL,
+	PRIMARY KEY( sc_id )
+);
+

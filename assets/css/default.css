@@ -1,0 +1,182 @@
+/*zero*/
+/* Borrowed and modified from http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, 
+h1, h2, h3, h4, h5, h6, 
+p, pre,
+a, img, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td, article, aside, 
+canvas, details, embed, figure, figcaption, 
+footer, header, hgroup, menu, nav, output, ruby, 
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+	margin: 0;
+}
+
+canvas {
+	position: relative;	
+}
+
+#main {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 700px;
+	height: 700px;
+	display: block !important;
+border: 4px solid yellow;
+/*	background-color: yellow;*/
+}
+
+div#fugazi {
+	position: absolute;
+/*
+	top: 110px;
+	margin-left: 50%;
+	left: -265px;
+	width: 525px;
+	height: 525px;
+*/
+	z-index:9999;
+}
+
+/*
+ul.fugazi li {
+	display: inline-block;
+	height: 100px; 
+	width: 100px;
+	border: 2px solid red;
+	margin-left: 1px;
+}
+
+ul.fugazi li:hover {
+	border: 2px solid yellow;
+}
+*/
+
+img.heh {
+	position: fixed;
+	z-index: 99;
+	bottom: 10px;
+	min-height: 100px;
+	height: 20%;
+	left: 5%;
+	width: 120px;
+	height: 100px;
+	border: 1px solid black;
+	display: inline-block;
+}
+
+/*...*/
+.main-container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.hold-container {
+	width: 300px;
+	margin: 0 auto;
+	top: 30%;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+	background: rgba( 200, 200, 200, 0.7 );
+	font-size: 1.2em;
+	min-height: 300px;
+	height: 30%;
+}
+
+.hold-container h2 {
+	font-size: 2.0em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.main-container ul a {
+	text-decoration: none;
+	color: black;
+}
+
+.main-container ul li {
+	width: 90%;
+	background-color: tan;
+	padding: 5%;
+	margin-bottom: 10px;
+	transition: background-color 0.3s;
+}
+
+.main-container ul li:hover {
+	background-color: cyan;
+}
+
+@keyframes mov {
+	0% { transform: rotate(0.5deg); }
+	50% { transform: rotate(-0.5deg); }
+	100% { transform: rotate(0.5deg); }
+}
+
+canvas {
+	animation-name: mov;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+body {
+	overflow: none;
+}
+
+
+/*advancing gradient*/
+@keyframes greenish {
+/*
+0% { background-image: linear-gradient( to bottom, rgba(10,255,0,0), rgba(10,230,0,1) ); }
+50% { background-image: linear-gradient( to bottom, rgba(10,255,230,0), rgba(10,230,230,1) ); }
+100% { background-image: linear-gradient( to bottom, rgba(10,255,0,0), rgba(10,230,0,1) ); }
+*/
+0% { background: rgba( 100, 233, 0, 0.2 ); }
+50% { background: rgba( 10, 233, 230, 1 ); }
+100% { background: rgba( 10, 233, 100, 0.3 ); }
+}
+
+html {
+	animation: greenish;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	background: rgba(10,255,0,0);
+	/*background-image: linear-gradient( to bottom, rgba(10,255,0,0), rgba(10,230,0,1) ); */
+}

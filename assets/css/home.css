@@ -1,0 +1,26 @@
+@keyframes xa {
+	0% { transform: rotateZ( 10deg ); }
+	50% { transform: rotateZ( -7deg ); }	
+	75% { transform: rotateZ( 2deg ); }	
+	85% { transform: rotateY( -6deg ); }	
+	100% { transform: rotateZ( 2deg ); }
+}
+
+#hold {
+	animation-name: xa;	
+	animation-duration: 5s;
+	transform: rotateZ(2deg);
+	/*animation-iteration-count: infinite;*/
+}
+
+canvas {
+	z-index: 99;
+}
+
+.hold-container {
+	z-index: 9999;
+}
+
+.hold-container li {
+	font-size: 1.1em;
+}

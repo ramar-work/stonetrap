@@ -1,0 +1,5 @@
+/*populate.mysql*/
+INSERT INTO stone_levels
+	(l_level, l_thumb_base, l_title, l_hint, l_basedir, l_code, l_date_added, l_date_modified
+VALUES
+	(1, "squiq-512x512-", "The Packard is in the Building.", "A hint.", "l1", 
